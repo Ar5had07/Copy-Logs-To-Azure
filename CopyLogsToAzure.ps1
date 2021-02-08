@@ -16,6 +16,8 @@
 ##########################################################################################################
 #############		Big Thanks to Tom Degreef - https://www.oscc.be/sccm/Logging-in-the-cloud-Part-1/ ########
 ##########################################################################################################
+#### Blog URL - 
+###  Replace $url , StorageAccountName , storSas and container with your values ###
 
 
 #Check if the Azure Modules are installed
@@ -32,7 +34,7 @@ If ((get-module -listavailable -name Azure.Storage).Name -eq 'Azure.Storage') {
 
 		#Setting the url to download from (this was generated using SAS)
 
-		$url = "https://edfcmg01.blob.core.windows.net/arshad-blob/AzureModules.zip?sp=r&st=2021-02-08T08:48:23Z&se=2051-02-08T16:48:23Z&spr=https&sv=2019-12-12&sr=b&sig=5hkzYdlqEuO8zGjZB22cK4PW9KQzlL6J1vYVpysSTGw%3D"
+		$url = ""
 
 		#Sets the destination where the zip file will be downloaded
 
@@ -59,9 +61,9 @@ Import-Module azure.storage
 
 $BlobProperties = @{
 
-    StorageAccountName   = 'edfcmg01'
-    storSas              = '?sp=racwdl&st=2021-02-08T09:42:47Z&se=2061-02-09T09:42:00Z&sv=2019-12-12&sr=c&sig=eb8PQpO3mx9sL8eF8rIXLaNB0EKexa2rasxda3%2FXBbo%3D'
-    container            = 'arshad-logs'
+    StorageAccountName   = 'xxxxx'
+    storSas              = 'xxxxx'
+    container            = 'xxxxx'
 }
 
 #Set more variables
